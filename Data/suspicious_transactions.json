@@ -1,0 +1,51 @@
+[
+    {
+        "TID": "TRX001",
+        "SumAm": 15000,
+        "CN": "1234567890123456",
+        "Date": "2024-11-20T18:39:00",
+        "LocationL": "LocationA"
+    },
+    {
+        "TID": "TRX002",
+        "SumAm": 2000,
+        "CN": "9876543210987654",
+        "Date": "2023-10-15T15:00:00",
+        "LocationL": "LocationB"
+    },
+    {
+        "TID": "TRX003",
+        "SumAm": 5000,
+        "CN": "1234567891234567",
+        "Date": "2023-11-5T15:00:00",
+        "LocationL": "LocationC"
+    },
+    {
+        "TID": "TRX004",
+        "SumAm": 5000,
+        "CN": "1234567890123456",
+        "Date": "2024-11-20T18:40:00",
+        "LocationL": "LocationA"
+    },
+    {
+        "TID": "TRX005",
+        "SumAm": 4000,
+        "CN": "1234567890123456",
+        "Date": "2024-11-20T18:45:00",
+        "LocationL": "LocationA"
+    },
+    {
+        "TID": "TRX006",
+        "SumAm": 3000,
+        "CN": "1234567890123456",
+        "Date": "2024-11-20T18:47:00",
+        "LocationL": "LocationA"
+    },
+    {
+        "TID": "TRX007",
+        "SumAm": 2000,
+        "CN": "1234567890123456",
+        "Date": "2024-11-20T18:48:00",
+        "LocationL": "LocationA"
+    }
+]
