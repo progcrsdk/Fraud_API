@@ -3,6 +3,7 @@ using Swashbuckle.AspNetCore.Filters;
 using System.Diagnostics;
 using System.Net.NetworkInformation;
 using Fraud_API.Services;
+using Microsoft.OpenApi.Models;
 
 namespace Fraud_API
 {
@@ -21,6 +22,16 @@ namespace Fraud_API
             builder.Services.AddSwaggerGen(c =>
             {
                 c.EnableAnnotations();           
+            });
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1.0",
+                    Title = "Fraud API",
+                    Description = "Этот API предоставляет возможность проверки на мошенничество транзакций на основе пользовательских данных. Он позволяет выявлять подозрительные транзакции с помощью анализа различных параметров, таких как сум-ма, номер карты, местоположение и частота транзакций. API разработан с целью помочь компаниям и организациям снижать риск мошенничества и обеспечи-вать безопасность своих клиентов и операций",
+                    
+                });
             });
             // Настройки CORS
             builder.Services.AddCors(options =>
