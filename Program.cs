@@ -9,14 +9,14 @@ namespace Fraud_API
 {
     public class Program
     {
-        private const string _commandTest = "http --url=busy-pet-rhino.ngrok-free.app 5053";             
+        //private const string _commandTest = "http --url=busy-pet-rhino.ngrok-free.app 5053";             
         
         public static async Task Main(string[] args)
         {
             string fPath = Path.Combine(Directory.GetCurrentDirectory(), "Data", "suspicious_transactions.json");
             FraudDetectionService.LoadSuspiciousTransactions(fPath);
-            string desktopPath = Path.Combine(Environment.CurrentDirectory, "ngrok.exe");
-            RunExternalApp(desktopPath, _commandTest);
+           //string desktopPath = Path.Combine(Environment.CurrentDirectory, "ngrok.exe");
+            //RunExternalApp(desktopPath, _commandTest);
 
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddSwaggerGen(c =>
