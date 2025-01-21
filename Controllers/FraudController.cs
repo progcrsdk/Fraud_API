@@ -39,5 +39,27 @@ namespace Fraud_API.Controllers
             }
             
         }
+
+        /// <summary>
+        /// Получение журнала проверок
+        /// </summary>
+        [HttpGet("GetLog")] // api/GetLog
+        [SwaggerOperation(
+            Summary = "Получить журнал проверок",
+            Description = "Возвращает журнал проверок по указанному номеру карты."
+        )]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<AuditLogEntry>))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ActionResult GetLog([FromQuery] string cardNumber)
+        {
+            if (string.IsNullOrEmpty(cardNumber))
+            {
+                return BadRequest("Номер карты не может быть пустым.");
+            }
+
+            var logEntries = Services.FraudDetectionService.GetLogByCardNumber(cardNumber);
+            return Ok(logEntries);
+        }
+
     }
 }
