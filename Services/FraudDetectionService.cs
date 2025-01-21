@@ -80,7 +80,7 @@ namespace Fraud_API.Services
                 CardNumber = transaction.CardNumber,
                 Amount = transaction.Amount,
                 IsFraudulent = isFraud,
-                Timestamp = DateTime.UtcNow
+                Timestamp = transaction.Date
             };
 
             _auditLog.Add(logEntry);
